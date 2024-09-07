@@ -1,7 +1,7 @@
 <mat-card-actions>
-  <mat-form-field appearance="fill" subscriptSizing="dynamic" style="width: 100%;">
-    <mat-label>Enter Message</mat-label>
-    <input matInput>
-    <mat-icon matSuffix>send</mat-icon>
+    <mat-form-field appearance="fill" subscriptSizing="dynamic" style="width:99%">
+    <mat-label style="color: black;">Enter Message</mat-label>
+    <input matInput [(ngModel)]="content" >
+    <mat-icon matSuffix style="background-color:rgba(131, 46, 210, 0.647);" (click)="sendMsg()">send</mat-icon>
   </mat-form-field>
 </mat-card-actions>

@@ -11,8 +11,8 @@
 
 <mat-drawer-container class="container">
     <mat-drawer #drawer class="sidenav" mode="side" opened>
-        <app-sidebar></app-sidebar>
+        <app-sidebar [user]="user" *ngIf="user"></app-sidebar>
     </mat-drawer>
-    <app-main-area></app-main-area>
+    <app-main-area [user]="user" *ngIf="user"></app-main-area>
 </mat-drawer-container>
   

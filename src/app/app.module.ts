@@ -21,6 +21,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
+import {provideHttpClient} from '@angular/common/http'
+import { SharedService } from './services/shared.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,10 +48,13 @@ import {MatCardModule} from '@angular/material/card';
     MatFormFieldModule, 
     MatInputModule, 
     MatIconModule,
-    MatCardModule 
+    MatCardModule,
+    FormsModule 
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient(),
+    SharedService
   ],
   bootstrap: [AppComponent]
 })

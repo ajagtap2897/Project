@@ -1,2 +1,2 @@
 <app-search></app-search>
-<app-chat-list></app-chat-list>
+<app-chat-list [user_id]="user._id" *ngIf="user"></app-chat-list>
